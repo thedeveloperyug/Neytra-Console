@@ -29,6 +29,7 @@ class NeytraApp extends StatelessWidget {
       debugShowCheckedModeBanner: environment != AppEnvironment.production,
       theme: buildLightTheme(),
       darkTheme: buildDarkTheme(),
+      themeMode: ThemeMode.light,
       routerConfig: appRouter,
     );
   }
