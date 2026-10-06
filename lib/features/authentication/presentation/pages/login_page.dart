@@ -236,7 +236,7 @@ class _BrandStory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
@@ -506,7 +506,9 @@ class _LoginGlassCard extends StatelessWidget {
                         ),
                       ),
                       validator: (value) {
-                        if ((value ?? '').isEmpty) return 'Enter your password.';
+                        if ((value ?? '').isEmpty) {
+                          return 'Enter your password.';
+                        }
                         return null;
                       },
                     ),
