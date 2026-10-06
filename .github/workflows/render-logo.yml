@@ -7,43 +7,78 @@
 # Unauthorized use, reproduction, or distribution is prohibited.
 # 
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
-name: Render Neytra logo PNG
+name: Sync Neytra logo SVG
+
 on:
   push:
     branches: [master]
     paths:
-      - assets/branding/logo/neytra_n.svg
+      - assets/branding/logo/neytra_n.png
+  workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
-  render:
+  sync:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - run: pip install cairosvg pillow
-      - name: Render transparent PNG
+
+      - name: Embed canonical PNG into SVG wrapper
         run: |
           python - <<'PY'
-          import io
-          import cairosvg
-          from PIL import Image, PngImagePlugin
-          svg = "assets/branding/logo/neytra_n.svg"
-          png = "assets/branding/logo/neytra_n.png"
-          raw = cairosvg.svg2png(url=svg, output_width=2048, output_height=2048)
-          image = Image.open(io.BytesIO(raw)).convert("RGBA")
-          meta = PngImagePlugin.PngInfo()
-          meta.add_text("Copyright", "Copyright (c) 2026 Neytra Intelligence Platform. All rights reserved.")
-          meta.add_text("License", "Proprietary and confidential. Unauthorized use, reproduction, or distribution is prohibited.")
-          image.save(png, pnginfo=meta, optimize=True)
+          import base64
+          import struct
+          from pathlib import Path
+
+          png_path = Path("assets/branding/logo/neytra_n.png")
+          svg_path = Path("assets/branding/logo/neytra_n.svg")
+
+          data = png_path.read_bytes()
+          if data[:8] != b"\x89PNG\r\n\x1a\n":
+              raise SystemExit("neytra_n.png is not a PNG")
+
+          width, height = struct.unpack(">II", data[16:24])
+          encoded = base64.b64encode(data).decode("ascii")
+
+          notice = """Copyright (c) 2026 Neytra Intelligence Platform. All rights reserved.
+
+          This software and its source code are proprietary and confidential.
+
+          No permission is granted to copy, modify, distribute, sublicense, sell, or otherwise use this software without prior written permission from the copyright holder.
+
+          Unauthorized use, reproduction, or distribution is prohibited.
+
+          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND."""
+
+          svg = f"""<!--
+          {notice}
+          -->
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 {width} {height}"
+               width="{width}"
+               height="{height}"
+               role="img"
+               aria-labelledby="title desc">
+            <title id="title">Neytra N</title>
+            <desc id="desc">Exact embedded rendering of the canonical Neytra N PNG artwork.</desc>
+            <image x="0" y="0"
+                   width="{width}"
+                   height="{height}"
+                   preserveAspectRatio="xMidYMid meet"
+                   href="data:image/png;base64,{encoded}"/>
+          </svg>
+          """
+          svg_path.write_text(svg, encoding="utf-8")
+          print(f"Embedded canonical PNG into SVG at {width}x{height}.")
           PY
-      - name: Commit rendered PNG
+
+      - name: Commit synchronized SVG
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/branding/logo/neytra_n.png
+          git add assets/branding/logo/neytra_n.svg
           git diff --cached --quiet && exit 0
-          git commit -m "Render Neytra N transparent PNG"
+          git commit -m "Sync Neytra N SVG with canonical PNG"
           git push origin master

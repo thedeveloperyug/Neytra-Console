@@ -1,37 +1,16 @@
 <!--
 Copyright (c) 2026 Neytra Intelligence Platform. All rights reserved.
+
 This software and its source code are proprietary and confidential.
+
 No permission is granted to copy, modify, distribute, sublicense, sell, or otherwise use this software without prior written permission from the copyright holder.
+
 Unauthorized use, reproduction, or distribution is prohibited.
+
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
-<title id="title">Neytra N</title>
-<desc id="desc">Neytra N logo vector companion matched to the canonical PNG artwork.</desc>
-<defs>
- <linearGradient id="L" x1=".2" y1=".02" x2=".7" y2=".98"><stop offset="0" stop-color="#56F7F4"/><stop offset=".24" stop-color="#0CDCF4"/><stop offset=".60" stop-color="#0877FF"/><stop offset="1" stop-color="#171CD7"/></linearGradient>
- <linearGradient id="R" x1=".12" y1=".02" x2=".78" y2=".98"><stop offset="0" stop-color="#151FF1"/><stop offset=".46" stop-color="#0753FF"/><stop offset=".83" stop-color="#08A9F8"/><stop offset="1" stop-color="#20E7ED"/></linearGradient>
- <linearGradient id="F" x1=".08" y1=".04" x2=".92" y2=".94"><stop offset="0" stop-color="#52F5F2"/><stop offset=".19" stop-color="#11DDF4"/><stop offset=".50" stop-color="#0878FF"/><stop offset=".73" stop-color="#09AEF7"/><stop offset="1" stop-color="#6CF8EE"/></linearGradient>
- <linearGradient id="U" x1=".05" y1=".05" x2=".85" y2=".9"><stop offset="0" stop-color="#06106F"/><stop offset=".48" stop-color="#0829C6"/><stop offset="1" stop-color="#0869FF"/></linearGradient>
- <linearGradient id="G" x1=".12" y1=".02" x2=".66" y2=".92"><stop offset="0" stop-color="#F1FFFF" stop-opacity=".78"/><stop offset=".30" stop-color="#D1FFFF" stop-opacity=".48"/><stop offset=".70" stop-color="#7AEAFF" stop-opacity=".22"/><stop offset="1" stop-color="#4AD7FF" stop-opacity=".07"/></linearGradient>
- <filter id="glow" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur in="SourceAlpha" stdDeviation="2" result="b"/><feOffset dy="2" result="o"/><feColorMatrix in="o" values="0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0.4 0 0 0 .2 0"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-</defs>
-<g filter="url(#glow)">
- <!-- geometry aligned to the canonical 1536x1024 PNG -->
- <rect x="320" y="58" width="342" height="886" rx="171" fill="url(#L)"/>
- <rect x="878" y="56" width="340" height="888" rx="170" fill="url(#R)"/>
- <!-- underside visible beneath the crossing -->
- <path d="M619 458 C657 482 693 515 727 555 L1004 873 C1032 905 1061 923 1091 929 C1051 957 992 963 947 934 L615 565 Z" fill="url(#U)"/>
- <!-- main cyan/blue folded ribbon -->
- <path d="M443 70 C497 44 560 56 604 105 L1176 746 C1231 808 1224 891 1165 935 C1105 980 1017 968 968 912 L390 264 C342 210 348 128 403 88 C416 79 429 73 443 70 Z" fill="url(#F)"/>
- <!-- translucent top-left glass fold -->
- <path d="M402 89 C452 48 531 48 584 88 C607 105 629 128 651 153 L917 451 C844 419 771 405 694 403 C611 401 549 381 494 339 L382 253 C356 206 362 129 402 89 Z" fill="url(#G)"/>
- <!-- glass fold lower boundary -->
- <path d="M382 253 C456 321 526 375 617 397 C695 416 780 396 917 451" fill="none" stroke="#B8FBFF" stroke-opacity=".19" stroke-width="4"/>
- <!-- rim highlights -->
- <path d="M374 190 C381 113 440 67 505 61 C559 56 600 75 634 112" fill="none" stroke="#D6FFFF" stroke-opacity=".72" stroke-width="9" stroke-linecap="round"/>
- <path d="M983 905 C1036 957 1114 960 1165 918 C1193 895 1208 863 1208 829" fill="none" stroke="#E3FFFF" stroke-opacity=".74" stroke-width="9" stroke-linecap="round"/>
- <path d="M324 233 L324 776 C324 869 389 931 473 940" fill="none" stroke="#35B6FF" stroke-opacity=".40" stroke-width="8" stroke-linecap="round"/>
- <path d="M1199 187 C1204 127 1161 79 1105 65" fill="none" stroke="#55E7FF" stroke-opacity=".35" stroke-width="7" stroke-linecap="round"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" width="1536" height="1024" role="img" aria-labelledby="title desc">
+  <title id="title">Neytra N</title>
+  <desc id="desc">Exact visual wrapper around the canonical Neytra N PNG artwork.</desc>
+  <image href="neytra_n.png" x="0" y="0" width="1536" height="1024" preserveAspectRatio="xMidYMid meet"/>
 </svg>
