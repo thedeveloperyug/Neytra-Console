@@ -1,0 +1,54 @@
+<!--
+Copyright (c) 2026 Neytra Intelligence Platform. All rights reserved.
+
+This software and its source code are proprietary and confidential.
+
+No permission is granted to copy, modify, distribute, sublicense, sell, or otherwise use this software without prior written permission from the copyright holder.
+
+Unauthorized use, reproduction, or distribution is prohibited.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Neytra N</title>
+  <desc id="desc">Neytra Intelligence Platform gradient N brand mark.</desc>
+  <defs>
+    <linearGradient id="left" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18D7FF"/>
+      <stop offset=".42" stop-color="#0788FF"/>
+      <stop offset="1" stop-color="#173BFF"/>
+    </linearGradient>
+    <linearGradient id="right" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#12D7FF"/>
+      <stop offset=".48" stop-color="#078BFF"/>
+      <stop offset="1" stop-color="#2441F4"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1=".08" y1=".08" x2=".92" y2=".92">
+      <stop offset="0" stop-color="#1FE4FF"/>
+      <stop offset=".46" stop-color="#087BFF"/>
+      <stop offset="1" stop-color="#2441F4"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".34"/>
+      <stop offset=".45" stop-color="#FFFFFF" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
+      <feOffset dy="7" result="offset"/>
+      <feColorMatrix in="offset" type="matrix" values="0 0 0 0 0.02 0 0 0 0 0.12 0 0 0 0 0.45 0 0 0 .30 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="markClip">
+      <rect x="82" y="70" width="112" height="372" rx="56"/>
+      <rect x="318" y="70" width="112" height="372" rx="56"/>
+      <path d="M124 80c24-17 55-12 74 8l220 264c20 24 16 60-8 80-24 20-60 16-80-8L110 160c-20-24-16-60 14-80z"/>
+    </clipPath>
+  </defs>
+  <g filter="url(#softShadow)">
+    <rect x="82" y="70" width="112" height="372" rx="56" fill="url(#left)"/>
+    <rect x="318" y="70" width="112" height="372" rx="56" fill="url(#right)"/>
+    <path d="M124 80c24-17 55-12 74 8l220 264c20 24 16 60-8 80-24 20-60 16-80-8L110 160c-20-24-16-60 14-80z" fill="url(#ribbon)"/>
+    <path d="M102 104c22-29 61-31 88-6l216 258c10 12 15 25 15 39L190 126c-25-29-58-30-88-22z" fill="url(#shine)" clip-path="url(#markClip)"/>
+  </g>
+</svg>
