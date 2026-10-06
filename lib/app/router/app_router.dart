@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 import 'package:go_router/go_router.dart';
 
 import '../../features/authentication/presentation/pages/login_page.dart';
-import '../shell/app_shell.dart';
+import '../../features/dashboard/presentation/pages/dashboard_page.dart';
 
 final GoRouter appRouter = GoRouter(
   initialLocation: '/login',
@@ -26,7 +26,7 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: '/overview',
       name: 'dashboard',
-      builder: (context, state) => const AppShell(),
+      builder: (context, state) => const DashboardPage(),
     ),
   ],
 );
