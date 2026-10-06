@@ -509,8 +509,8 @@ class _BrandStory extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 20),
-        const ConstrainedBox(
-          constraints: BoxConstraints(maxWidth: 560),
+        ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 560),
           child: Text(
             'Securely access Neytra Console to configure solutions, monitor '
             'verified outcomes, review evidence, and manage enterprise operations.',
