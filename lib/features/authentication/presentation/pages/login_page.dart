@@ -695,7 +695,7 @@ class _PreviewNotice extends StatelessWidget {
             SizedBox(width: 9),
             Expanded(
               child: Text(
-                'Preview deployment: authentication is not connected. '
+                'UI preview: authentication is not connected. '
                 'Credentials entered here are not transmitted.',
                 style: TextStyle(
                   color: Color(0xFF596A80),
