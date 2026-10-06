@@ -10,4 +10,4 @@ Unauthorized use, reproduction, or distribution is prohibited.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 */
 
-library neytra_design_system;
+// Public design-system exports are added as components stabilize.

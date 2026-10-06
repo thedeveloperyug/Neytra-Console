@@ -23,10 +23,10 @@ class ConfigurationPage extends StatelessWidget {
   const ConfigurationPage({super.key});
 
   @override
-  Widget build(BuildContext context) => const Scaffold(
+  Widget build(BuildContext context) => Scaffold(
         body: ListView(
-          padding: EdgeInsets.all(24),
-          children: <Widget>[
+          padding: const EdgeInsets.all(24),
+          children: const <Widget>[
             AiStrategySelector(),
             ProviderSelector(),
             BudgetEditor(),

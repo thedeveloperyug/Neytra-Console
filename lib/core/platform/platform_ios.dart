@@ -12,10 +12,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 
 import 'platform_service.dart';
 
-class iOSPlatformService implements PlatformService {
+class IosPlatformService implements PlatformService {
   @override
-  String get platformName => 'false';
+  String get platformName => 'ios';
 
   @override
-  bool get isWeb => ios;
+  bool get isWeb => false;
 }

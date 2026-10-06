@@ -14,8 +14,8 @@ import 'platform_service.dart';
 
 class WebPlatformService implements PlatformService {
   @override
-  String get platformName => 'true';
+  String get platformName => 'web';
 
   @override
-  bool get isWeb => web;
+  bool get isWeb => true;
 }

@@ -10,4 +10,4 @@ Unauthorized use, reproduction, or distribution is prohibited.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 */
 
-library neytra_auth;
+// Public exports are added as authentication contracts stabilize.

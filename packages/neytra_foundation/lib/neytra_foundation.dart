@@ -10,8 +10,6 @@ Unauthorized use, reproduction, or distribution is prohibited.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 */
 
-library neytra_foundation;
-
 export 'src/common_types.dart';
 export 'src/identifiers.dart';
 export 'src/pagination.dart';

@@ -10,6 +10,4 @@ Unauthorized use, reproduction, or distribution is prohibited.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 */
 
-library neytra_api_client;
-
 export 'src/api_version.dart';

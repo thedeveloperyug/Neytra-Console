@@ -14,8 +14,8 @@ import 'platform_service.dart';
 
 class LinuxPlatformService implements PlatformService {
   @override
-  String get platformName => 'false';
+  String get platformName => 'linux';
 
   @override
-  bool get isWeb => linux;
+  bool get isWeb => false;
 }

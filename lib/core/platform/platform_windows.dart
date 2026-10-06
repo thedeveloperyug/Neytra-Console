@@ -14,8 +14,8 @@ import 'platform_service.dart';
 
 class WindowsPlatformService implements PlatformService {
   @override
-  String get platformName => 'false';
+  String get platformName => 'windows';
 
   @override
-  bool get isWeb => windows;
+  bool get isWeb => false;
 }
