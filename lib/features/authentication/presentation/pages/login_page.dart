@@ -13,6 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -22,6 +23,9 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  static const _demoEmail = 'demo@neytra.ai';
+  static const _demoPassword = 'Neytra@2026';
+
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -48,11 +52,19 @@ class _LoginPageState extends State<LoginPage> {
       return;
     }
 
-    _passwordController.clear();
+    final email = _emailController.text.trim().toLowerCase();
+    final password = _passwordController.text;
+
     setState(() => _busy = false);
+
+    if (email == _demoEmail && password == _demoPassword) {
+      _passwordController.clear();
+      context.go('/overview');
+      return;
+    }
+
     _showPreviewMessage(
-      'Authentication is not connected in this GitHub Pages preview. '
-      'No credentials were transmitted.',
+      'Incorrect demo credentials. Use demo@neytra.ai and Neytra@2026.',
     );
   }
 
@@ -1092,8 +1104,8 @@ class _PreviewNotice extends StatelessWidget {
             SizedBox(width: 9),
             Expanded(
               child: Text(
-                'UI preview: authentication is not connected. '
-                'Credentials entered here are not transmitted.',
+                'Demo access — Email: demo@neytra.ai  •  '
+                'Password: Neytra@2026',
                 style: TextStyle(
                   color: Color(0xFF596A80),
                   fontSize: 11.5,
