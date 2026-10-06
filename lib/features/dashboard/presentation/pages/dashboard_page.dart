@@ -591,7 +591,7 @@ class _MetricCard extends StatelessWidget {
             style: const TextStyle(
               color: Color(0xFF0A1733),
               fontSize: 27,
-              fontWeight: FontWeight.w750,
+              fontWeight: FontWeight.w700,
               letterSpacing: -0.6,
             ),
           ),
@@ -867,19 +867,19 @@ class _SolutionsPanel extends StatelessWidget {
           ];
 
           if (stack) {
-            return const Column(
+            return Column(
               children: <Widget>[
                 cards[0],
-                SizedBox(height: 14),
+                const SizedBox(height: 14),
                 cards[1],
               ],
             );
           }
 
-          return const Row(
+          return Row(
             children: <Widget>[
               Expanded(child: cards[0]),
-              SizedBox(width: 14),
+              const SizedBox(width: 14),
               Expanded(child: cards[1]),
             ],
           );
@@ -936,7 +936,7 @@ class _SolutionTile extends StatelessWidget {
               style: const TextStyle(
                 color: Color(0xFF0A1733),
                 fontSize: 30,
-                fontWeight: FontWeight.w750,
+                fontWeight: FontWeight.w700,
               ),
             ),
             const SizedBox(height: 4),
@@ -1041,7 +1041,7 @@ class _SectionCard extends StatelessWidget {
             style: const TextStyle(
               color: Color(0xFF0A1733),
               fontSize: 17,
-              fontWeight: FontWeight.w750,
+              fontWeight: FontWeight.w700,
             ),
           ),
           const SizedBox(height: 4),
