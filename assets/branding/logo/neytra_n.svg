@@ -9,46 +9,67 @@ Unauthorized use, reproduction, or distribution is prohibited.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
-  <title id="title">Neytra N</title>
-  <desc id="desc">Neytra Intelligence Platform gradient N brand mark.</desc>
-  <defs>
-    <linearGradient id="left" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#18D7FF"/>
-      <stop offset=".42" stop-color="#0788FF"/>
-      <stop offset="1" stop-color="#173BFF"/>
-    </linearGradient>
-    <linearGradient id="right" x1="0" y1="1" x2="1" y2="0">
-      <stop offset="0" stop-color="#12D7FF"/>
-      <stop offset=".48" stop-color="#078BFF"/>
-      <stop offset="1" stop-color="#2441F4"/>
-    </linearGradient>
-    <linearGradient id="ribbon" x1=".08" y1=".08" x2=".92" y2=".92">
-      <stop offset="0" stop-color="#1FE4FF"/>
-      <stop offset=".46" stop-color="#087BFF"/>
-      <stop offset="1" stop-color="#2441F4"/>
-    </linearGradient>
-    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".34"/>
-      <stop offset=".45" stop-color="#FFFFFF" stop-opacity=".06"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="softShadow" x="-25%" y="-25%" width="150%" height="150%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
-      <feOffset dy="7" result="offset"/>
-      <feColorMatrix in="offset" type="matrix" values="0 0 0 0 0.02 0 0 0 0 0.12 0 0 0 0 0.45 0 0 0 .30 0"/>
-      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <clipPath id="markClip">
-      <rect x="82" y="70" width="112" height="372" rx="56"/>
-      <rect x="318" y="70" width="112" height="372" rx="56"/>
-      <path d="M124 80c24-17 55-12 74 8l220 264c20 24 16 60-8 80-24 20-60 16-80-8L110 160c-20-24-16-60 14-80z"/>
-    </clipPath>
-  </defs>
-  <g filter="url(#softShadow)">
-    <rect x="82" y="70" width="112" height="372" rx="56" fill="url(#left)"/>
-    <rect x="318" y="70" width="112" height="372" rx="56" fill="url(#right)"/>
-    <path d="M124 80c24-17 55-12 74 8l220 264c20 24 16 60-8 80-24 20-60 16-80-8L110 160c-20-24-16-60 14-80z" fill="url(#ribbon)"/>
-    <path d="M102 104c22-29 61-31 88-6l216 258c10 12 15 25 15 39L190 126c-25-29-58-30-88-22z" fill="url(#shine)" clip-path="url(#markClip)"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+<title id="title">Neytra N</title>
+<desc id="desc">Official Neytra ribbon N mark with cyan and electric-blue glass gradients.</desc>
+<defs>
+  <linearGradient id="leftPillar" x1="0.18" y1="0.05" x2="0.72" y2="0.98">
+    <stop offset="0" stop-color="#49F2F5"/><stop offset=".30" stop-color="#08CFF4"/>
+    <stop offset=".63" stop-color="#087BFF"/><stop offset="1" stop-color="#1423E7"/>
+  </linearGradient>
+  <linearGradient id="rightPillar" x1=".15" y1=".05" x2=".82" y2=".95">
+    <stop offset="0" stop-color="#1420F2"/><stop offset=".52" stop-color="#0759FF"/><stop offset="1" stop-color="#11CFF0"/>
+  </linearGradient>
+  <linearGradient id="frontRibbon" x1=".12" y1=".12" x2=".88" y2=".88">
+    <stop offset="0" stop-color="#50F2F2"/><stop offset=".30" stop-color="#11D8F4"/>
+    <stop offset=".58" stop-color="#0876FF"/><stop offset=".82" stop-color="#10C7F1"/><stop offset="1" stop-color="#5AF5F1"/>
+  </linearGradient>
+  <linearGradient id="backRibbon" x1=".18" y1=".2" x2=".8" y2=".82">
+    <stop offset="0" stop-color="#07138D"/><stop offset=".5" stop-color="#0733D8"/><stop offset="1" stop-color="#087BFF"/>
+  </linearGradient>
+  <linearGradient id="glass" x1=".2" y1="0" x2=".7" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity=".58"/><stop offset=".42" stop-color="#D8FFFF" stop-opacity=".20"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="shadow" x="-18%" y="-18%" width="136%" height="136%">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="9" result="b"/>
+    <feOffset dy="8" result="o"/>
+    <feColorMatrix in="o" values="0 0 0 0 0.01 0 0 0 0 0.08 0 0 0 0 0.35 0 0 0 .22 0"/>
+    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<g filter="url(#shadow)">
+  <!-- rounded vertical stems -->
+  <rect x="202" y="118" width="208" height="788" rx="104" fill="url(#leftPillar)"/>
+  <rect x="614" y="118" width="208" height="788" rx="104" fill="url(#rightPillar)"/>
+  <!-- dark under-fold visible through the crossing -->
+  <path d="M366 447 L648 783 Q680 819 716 840 L400 520 Z" fill="url(#backRibbon)" opacity=".95"/>
+  <!-- main ribbon: same broad sweep and rounded lower-right termination as reference -->
+  <path d="M285 132
+           C326 105 375 113 407 147
+           L797 655
+           C839 710 832 789 781 834
+           C730 879 651 873 608 820
+           L226 350
+           C184 298 187 207 234 158
+           C249 143 266 135 285 132 Z"
+        fill="url(#frontRibbon)"/>
+  <!-- upper-left translucent glass face -->
+  <path d="M224 165
+           C260 117 334 109 383 139
+           C403 151 421 168 437 188
+           L631 440
+           C556 403 481 394 409 391
+           C350 388 303 367 267 333
+           C229 298 205 251 205 207
+           C205 191 211 176 224 165 Z"
+        fill="url(#glass)"/>
+  <!-- glossy edge highlights -->
+  <path d="M221 198 C226 148 266 126 309 123 C354 120 388 138 414 169"
+        fill="none" stroke="#B8FFFF" stroke-opacity=".60" stroke-width="7" stroke-linecap="round"/>
+  <path d="M617 817 C654 861 721 869 770 830 C800 806 816 773 815 739"
+        fill="none" stroke="#D0FFFF" stroke-opacity=".70" stroke-width="7" stroke-linecap="round"/>
+  <path d="M206 224 L206 800 C206 855 250 899 305 902"
+        fill="none" stroke="#35BFFF" stroke-opacity=".42" stroke-width="6" stroke-linecap="round"/>
+</g>
 </svg>
