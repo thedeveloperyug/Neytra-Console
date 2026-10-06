@@ -1,0 +1,26 @@
+# Copyright (c) 2026 Neytra Intelligence Platform. All rights reserved.
+# 
+# This software and its source code are proprietary and confidential.
+# 
+# No permission is granted to copy, modify, distribute, sublicense, sell, or otherwise use this software without prior written permission from the copyright holder.
+# 
+# Unauthorized use, reproduction, or distribution is prohibited.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+name: Release Linux
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter build linux --release

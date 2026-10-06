@@ -1,0 +1,22 @@
+# Copyright (c) 2026 Neytra Intelligence Platform. All rights reserved.
+# 
+# This software and its source code are proprietary and confidential.
+# 
+# No permission is granted to copy, modify, distribute, sublicense, sell, or otherwise use this software without prior written permission from the copyright holder.
+# 
+# Unauthorized use, reproduction, or distribution is prohibited.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false

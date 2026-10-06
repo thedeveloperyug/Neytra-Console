@@ -1,0 +1,10 @@
+{
+  "copyrightNotice": "Copyright (c) 2026 Neytra Intelligence Platform. All rights reserved.\n\nThis software and its source code are proprietary and confidential.\n\nNo permission is granted to copy, modify, distribute, sublicense, sell, or otherwise use this software without prior written permission from the copyright holder.\n\nUnauthorized use, reproduction, or distribution is prohibited.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND.",
+  "name": "Neytra Console",
+  "short_name": "Neytra",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#071B33",
+  "theme_color": "#0B66F6",
+  "description": "Customer console for the Neytra Intelligence Platform."
+}
