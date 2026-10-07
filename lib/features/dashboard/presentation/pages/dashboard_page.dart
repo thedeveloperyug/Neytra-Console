@@ -15,6 +15,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../procurement_supply_chain/presentation/pages/procurement_workspace_body.dart';
+
 enum _WorkspaceSection {
   overview,
   solutions,
@@ -889,6 +891,10 @@ class _WorkspaceBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (businessArea == 'Procurement & Supply Chain') {
+      return ProcurementWorkspaceBody(section: section.name);
+    }
+
     if (businessArea != 'Finance & Accounting') {
       return _CategoryPlaceholder(
         businessArea: businessArea,
